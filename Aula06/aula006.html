@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-color: rgb(3, 3, 3);
+            color: rgb(255, 255, 255);
+            font: 20pt Arial;
+        }
+        h1 {
+          color: rgb(204, 21, 21);  
+        }
+    </style>
+
+</head>
+<body>
+    <div style="width: 100%;">
+        <div style="text-align: center;">
+
+    <h1 id="demo">Bem Vindo!</h1>
+
+        <form action="/action_page.php ">
+
+        <label for="email">Enter your email:</label>
+
+        <input type="email" id="email" name="email"><br><br><br>
+
+        <input type="reset" value="Reset">
+
+        <input type="submit" value="Submit"><br><br><br>
+        </form>
+    <script>
+        /*var nome = String(window.prompt('Qual seu nome?'))
+        window.alert('Ola, ' + nome)
+        var n1 = parseFloat(window.prompt('Digite um numero: '))
+        var n2 = parseFloat(window.prompt('DIgite outro numero'))
+        var s = n1 + n2;
+        window.alert('a soma dos numeros é: ' + s ) */
+        function myFunction(){
+           /* document.getElementById("demo").style.fontSize = "65px";*/
+            document.getElementById("demo").style.backgroundColor = "yellow";
+            document.getElementById("demo").innerHTML = "Bem Vindo!";
+        }
+        function myTwoFunction() {
+            document.getElementById("demo").style.backgroundColor = "black"
+        }
+        function light(sw) {
+            var pic;
+                if (sw== 0) {
+                    pic = "pic_bulboff.gif"
+                    } else {
+                    pic = "pic_bulbon.gif"
+                }
+            document.getElementById('myImage').src = pic;
+        }   
+    </script>
+
+    <img id="myImage" src = "pic_bulboff.gif" width="100"
+    height="180">
+    
+    
+    <p>
+    <button type="button" onclick="light(1),myFunction()">light
+    On</button>
+    <button type="button" onclick="light(0),myTwoFunction()">light
+    Off</button>
+    </p>
+
+</div>
+</div>
+
+   
+</body>
+</html>
